@@ -92,8 +92,8 @@ jobs:
 
       - name: Build unsigned Sonic X Shadow Generations IPA
         working-directory: nxnative
-        env:
-          DM_NO_BC_ASTC: all
+        
+          
         run: |
           set -euo pipefail
           "$RUNNER_TEMP/nx-venv/bin/python" scripts/build_ipa_from_nsp.py "$RUNNER_TEMP/sonic_shadow_gens" -k "$RUNNER_TEMP/prod.keys" --allow-other-metal -o "$RUNNER_TEMP/Sonic-Shadow-Gens.ipa"
